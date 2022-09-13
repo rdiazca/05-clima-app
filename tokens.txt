@@ -1,0 +1,1 @@
+MAPBOX_KEY = pk.eyJ1IjoicmRpYXpjYSIsImEiOiJjbDgwbTd1Z2cwN2p1M25ydXVsNjcwaGRiIn0.oXvNHL0uOzzz8cO_ebCcgQ

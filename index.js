@@ -1,6 +1,11 @@
 //const { leerInput } = require("./helpers/inquirer");
+
+import * as dotenv from 'dotenv';
+
 import { leerInput, inquirerMenu, pausa } from './helpers/inquirer.js';
 import { Searches } from './models/searches.js';
+
+dotenv.config();
 
 const main = async () => {
   const searches = new Searches();

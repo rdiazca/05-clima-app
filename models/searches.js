@@ -8,8 +8,7 @@ export class Searches {
 
   get paramsMapBox() {
     return {
-      access_token:
-        'pk.eyJ1IjoicmRpYXpjYSIsImEiOiJjbDgwbTd1Z2cwN2p1M25ydXVsNjcwaGRiIn0.oXvNHL0uOzzz8cO_ebCcgQ',
+      access_token: process.env.MAPBOX_KEY,
       limit: 5,
     };
   }

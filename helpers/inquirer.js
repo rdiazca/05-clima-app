@@ -50,7 +50,7 @@ export const pausa = async () => {
   await inquirer.prompt(question);
 };
 
-export const leerInput = async (message) => {
+export const readInput = async (message) => {
   const question = [
     {
       type: 'input',
@@ -69,13 +69,13 @@ export const leerInput = async (message) => {
   return desc;
 };
 
-export const listadoTareasBorrar = async (tareas = []) => {
-  const choices = tareas.map((tarea, i) => {
+export const placesList = async (places = []) => {
+  const choices = places.map((place, i) => {
     const idx = `${i + 1}.`.green;
 
     return {
-      value: tarea.id,
-      name: `${idx} ${tarea.desc}`,
+      value: place.id,
+      name: `${idx} ${place.name}`,
     };
   });
 
@@ -84,16 +84,16 @@ export const listadoTareasBorrar = async (tareas = []) => {
     name: '0.'.green + ' Cancelar',
   });
 
-  const preguntas = [
+  const questions = [
     {
       type: 'list',
       name: 'id',
-      message: 'Borrar',
+      message: 'Select place:',
       choices,
     },
   ];
 
-  const { id } = await inquirer.prompt(preguntas);
+  const { id } = await inquirer.prompt(questions);
   return id;
 };
 
